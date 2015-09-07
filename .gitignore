@@ -1,0 +1,85 @@
+//#include <iostream>
+//#include <math.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//	float a, b, c, x1, x2, d;
+//
+//
+//	cout << "Enter a,b,c\n";
+//	cin >> a >> b >> c;
+//	d = b*b - 4 * a*c;
+//
+//	if (a == 0 && b == 0 && c == 0)
+//	{
+//		cout << "infinity solution\n";
+//	}
+//	else if (a == 0 && b == 0)
+//	{
+//		cout << "don't solution\n";
+//	}
+//	else if (c == 0)
+//	{
+//		x1 = 0;
+//		x2 = -b / a;
+//		cout <<"x1="<<x1<<"\n"<<"x2="<<x2<<"\n";
+//
+//	}
+//
+//	else if (a == 0)
+//	{
+//		x1 = -c / b;
+//		cout << "x="<<x1<<"\n";
+//	}
+//
+//	else if (d == 0)
+//	{
+//		x1 = -b / (2 * a);
+//		cout << "x="<<x1<<"\n";
+//	}
+//	else if (d > 0)
+//	{
+//		x1 = -b + sqrt(d) / (2 * a);
+//		x2 = -b - sqrt(d) / (2 * a);
+//		cout <<"x1="<< x1 << "\n" <<"x2="<< x2 << "\n";
+//	}
+//	else if (d < 0)
+//	{
+//		cout << "D<0 , don't solution\n";
+//	}
+//
+//
+//	return 0;
+//}
+
+
+
+#include <iostream>
+#include <stdbool.h>
+
+using namespace std;
+
+
+int main()
+{
+
+	int n,p,d;
+	bool isPrime;
+
+	cout << "Enter N\n";
+	cin >> n;
+	
+
+	for (p = 2; p <= n; p++)
+	{
+		isPrime = true;
+		for (d = 2; d < p ; d++)
+		if (p % d == 0)
+			isPrime = false;
+		if (isPrime != false)
+			cout << p << "\n";
+	}
+	return 0;
+}
