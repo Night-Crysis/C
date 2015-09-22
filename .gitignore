@@ -83,3 +83,36 @@ int main()
 	}
 	return 0;
 }
+
+
+
+
+п#include <stdio.h>
+
+int main()
+{
+
+	long int i;
+	long float n = 1,s;
+	long float a[119999];
+	a[0] = 1;
+	
+	
+	
+
+	for (i = 1; i <119998 ; i++)
+	{
+		s = 1 / (2 * n + 1);
+		if (i % 2 != 0)
+		{
+			s = -s;
+		}
+		
+		a[i] =(a[i-1] + s);
+		n++;
+	}
+	printf("pi = %f\n", 4 * a[119997]);
+
+
+	return 0;
+}
